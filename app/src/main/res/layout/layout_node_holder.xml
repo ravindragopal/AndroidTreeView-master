@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/selectableItemBackground"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/txtNestedListHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:drawableLeft="@drawable/wrapper_right_arrow"
+        android:drawableStart="@drawable/wrapper_right_arrow"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:textSize="14sp" />
+
+    <CheckBox
+        android:id="@+id/chkNestedListChild"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/txtNestedListHeader"
+        android:layout_toRightOf="@+id/txtNestedListHeader"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtNestedChildCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/chkNestedListChild"
+        android:layout_toRightOf="@+id/chkNestedListChild"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text=" ("
+        android:textSize="14sp" />
+</RelativeLayout>

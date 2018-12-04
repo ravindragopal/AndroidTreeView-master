@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_lgray">#808080</color>
+    <color name="text_gray">#323232</color>
+    <color name="colorPrimary">#003C71</color>
+    <color name="large_text_view">#212121</color>
+</resources>
