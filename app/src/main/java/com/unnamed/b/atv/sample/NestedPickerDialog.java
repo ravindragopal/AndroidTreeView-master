@@ -27,6 +27,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Random;
+
 public class NestedPickerDialog extends DialogFragment implements NodeHeaderHolder.NodeHeaderInterface {
 
     private String mSelectedNodeValue;
@@ -148,7 +150,6 @@ public class NestedPickerDialog extends DialogFragment implements NodeHeaderHold
                 mAndroidTreeView.expandNodeLevel(Integer.parseInt(Pref.getInstance().getString("row")),Pref.getInstance().getInt("level") - 1);
 //                mAndroidTreeView.expandLevel(Pref.getInstance().getInt("level") - 1);
 //                mAndroidTreeView.expandLevel(selectedTreeNode,Pref.getInstance().getInt("level") - 1);
-
                 Message m = new Message();
                 NodeHeaderHolder.mHandler.sendMessage(m);
             }
@@ -170,13 +171,15 @@ public class NestedPickerDialog extends DialogFragment implements NodeHeaderHold
             sRoot = root;
             tRoot = root;
             int nodeKey = 0;
+            Random random = new Random();
+
 
             JSONArray jsonArray = new JSONArray();
 
             for (int i = 0; i < 10; i++) {
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.put("id", i);
-                jsonObject.put("node", "Pune Facility Long name facility with special characters12345!@#$%^&**(__/>,<>'{}" + i);
+                jsonObject.put("node", "Pune Facility Long name facility with special characters12345!@#$%^&**(__/>,<>'{}" + random.nextInt());
                 jsonArray.put(jsonObject);
             }
 
